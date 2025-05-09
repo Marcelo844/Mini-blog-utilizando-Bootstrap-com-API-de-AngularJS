@@ -13,15 +13,8 @@ Este projeto é um mini blog estático desenvolvido com **HTML**, **CSS**, **Boo
 
 - HTML5
 - CSS3
-- [Bootstrap 5](https://getbootstrap.com/)
-- [AngularJS 1.x](https://angularjs.org/)
-
-## 📁 Estrutura de diretórios
-├── index.html # Página inicial (todas as postagens)
-├── post.html # Página de leitura individual
-├── style.css # Estilização da página
-├── script.js # Interatividade do Site   
-└── README.md
+- Bootstrap 5 (https://getbootstrap.com/)
+- AngularJS 1.x
 
 ## 🔮 Próximos passos
 
