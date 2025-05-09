@@ -17,7 +17,6 @@ Este projeto é um mini blog estático desenvolvido com **HTML**, **CSS**, **Boo
 - [AngularJS 1.x](https://angularjs.org/)
 
 ## 📁 Estrutura de diretórios
-/
 ├── index.html # Página inicial (todas as postagens)
 ├── post.html # Página de leitura individual
 ├── style.css # Estilização da página
