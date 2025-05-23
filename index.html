@@ -29,18 +29,18 @@
     </div>
   </header>
   
-<main class="container mt-4" ng-app="blog">
-  <div class="row" id="post-list" ng-controller="Rest">
-    <div class="col-md-4 mb-4">
-        <a href="post.html?id=1" class="text-decoration-none">
-          <div class="card h-100">
-            <img src="{{publicacao.thumbImage}}" class="card-img-top" alt="Imagem do post">
-            <div class="card-body">
-              <h5 class="card-text">{{ publicacao.title }}</h5>
-              <small class="text-muted">{{ publicacao.description }}</small>
-            </div>
+<main class="container mt-4" ng-controller="Rest">
+  <div class="row">
+    <div class="col-md-4 mb-4" ng-repeat="publicacao in (publicacoes | filter:temImagem) | limitTo:6 track by $index">
+      <a href="post.html?index={{$index}}" class="text-decoration-none">
+        <div class="card h-100">
+          <img ng-src="{{publicacao.thumbImage}}" class="card-img-top" alt="Imagem do post">
+          <div class="card-body">
+            <h5 class="card-title text-center">{{publicacao.title}}</h5>
+            <p class="card-text text-center">{{publicacao.description}}</p>
           </div>
-        </a>
+        </div>
+      </a>
     </div>
   </div>
 </main>

@@ -28,15 +28,27 @@
       </nav>
     </div>
 </header>
-
-  <div class="container mt-5">
-    <h1>{{ postagem.title }}</h1>
-    <img ng-src="{{ postagem.thumbImage }}" alt="Imagem" class="img-fluid my-3">
-    <p>{{ postagem.description }}</p>
-    <p>{{ postagem.content }}</p>
+<main class="container my-5 pt-5" ng-if="postagem">
+  <div class="row justify-content-center">
+    <div class="col-lg-10 col-xl-8">
+      <div class="card shadow rounded-4 overflow-hidden">
+        <img ng-src="{{postagem.thumbImage}}" class="img-fluid w-100" alt="{{postagem.title}}">
+        <div class="card-body">
+          <h2 class="card-title text-center">{{postagem.title}}</h2>
+          <p class="card-text fs-5" ng-bind-html="postagem.description"></p>
+        </div>
+      </div>
+    </div>
   </div>
+</main>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+<div class="alert alert-danger text-center" ng-if="!postagem">
+  Publicação não encontrada.
+</div>
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-sanitize.min.js"></script>
   <script src="post.js"></script>
 </body>
 </html>
